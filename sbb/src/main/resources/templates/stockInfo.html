@@ -12,7 +12,7 @@
 		<h2 class="title">Stock Info</h2>
 
 		<table class="tableBox">
-			<tr>
+			<tr>			
 				<th class="titleTop">기업 이름</th>
 				<th class="titleTop">현재가</th>
 				<th class="titleTop">전일대비</th>
@@ -34,7 +34,6 @@
 				<!-- 등락률-->
 				<td th:class="${entry.value.contains('상승') ? 'positive' : 'negative'}"
 					th:text="${entry.value.contains('보합') ? '0%' : entry.value.contains('상승') ? '+' + entry.value.split(' ')[6] + '%' : '-' + entry.value.split(' ')[6] + '%'}">
-				</td>
 
 			</tr>
 

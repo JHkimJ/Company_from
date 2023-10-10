@@ -1,36 +1,38 @@
 <nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img th:src="@{/images/logo.png}" alt="로고이미지" width="50px"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Display welcome message for authenticated users -->
-                <li th:if="${#authorization.expression('isAuthenticated()')}">
-                    <span>Welcome, [[@{#authentication.username}]]</span>
-                </li>
-                <li class="nav-item" sec:authorize="isAnonymous()">
-                    <a class="nav-link" th:href="@{/user/login}">Log in</a>
-                </li>
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link" th:href="@{/user/logout}">Log out</a>
-                </li>
-                <!-- Hide the "Sign up" link when the user is authenticated -->
-                <li class="nav-item" sec:authorize="isAnonymous()">
-                    <a class="nav-link" th:href="@{/user/signup}">Sign up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/question/list}">Q&A</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/email}">Email</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/loadStockInfo}">Stock Info</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/"><img th:src="@{/images/logo.png}" alt="로고이미지" width="50px" /></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<!-- Display welcome message for authenticated users -->
+				<li th:if="${#authorization.expression('isAuthenticated()')}">
+					<!--<span>Welcome, [[@{#authentication.username}]]</span>-->
+					<p class="author-dsiplay" th:text="${#authentication.name}">.</p>
+					<p>님 환영합니다.</p>
+				</li>
+				<li class="nav-item" sec:authorize="isAnonymous()">
+					<a class="nav-link" th:href="@{/user/login}">Log in</a>
+				</li>
+				<li class="nav-item" sec:authorize="isAuthenticated()">
+					<a class="nav-link" th:href="@{/user/logout}">Log out</a>
+				</li>
+				<!-- Hide the "Sign up" link when the user is authenticated -->
+				<li class="nav-item" sec:authorize="isAnonymous()">
+					<a class="nav-link" th:href="@{/user/signup}">Sign up</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/question/list}">Q&A</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/email}">Email</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/loadStockInfo}">Stock Info</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
