@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>로그인</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+		<form th:action="@{/user/login}" method="post">
+
+			<h2 class="login-title">로그인</h2>
+
+			<div class="sub-text">
+				로그인을 하시면 모든 서비스를 이용하실 수 있습니다.
+				<br>아직 회원이 아니시면 회원가입을 해주세요.
+			</div>
+
+			<!-- ID 입력 칸 -->
+			<div class="mb-3">
+				<label for="username" class="form-label">ID</label>
+				<input type="text" name="username" id="username" class="form-control">
+			</div>
+
+			<!-- Password 입력 칸 -->
+			<div class='mb-3'>
+				<label for='password' class='form-label'>Password</label>
+				<input type='password' name='password' id='password' class='form-control'>
+			</div>
+
+			<!-- 로그인 버튼 -->
+			<button type='submit' class='btn btn-primary'>Log in</button>
+
+		</form>
+
+		<!-- 회원가입 버튼 -->
+		<form th:action='@{/user/signup}' method='post'>
+			<button type='submit' class='btn btn-primary2'>Sign up</button>
+		</form>
+
+	</div>
+
+</body>
+
+
+</html>

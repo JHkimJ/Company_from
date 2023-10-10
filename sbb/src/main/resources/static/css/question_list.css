@@ -1,0 +1,92 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.questionBtn {
+	width: 100%;
+	height: 30px;
+}
+
+.questionBtn button {
+	width: 140px;
+	height: 40px;
+	background-color: #3e3d55;
+	border: none;
+	color: #fff;
+	padding: 5px;
+}
+
+.groupInp {
+	width: 50%;
+	display: flex;
+	justify-content: end;
+}
+
+.input-group {
+	width: 70%;
+}
+
+.tableTitle {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.text-center th:nth-child(2) {
+	width: 50%;
+}
+
+.text-center1 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.pageBox{
+	display: flex;
+	justify-content: center;
+}
+
+.pageList {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 100px;
+	line-height: 70px;
+	margin: 0 auto;
+}
+
+.page-item {
+	border: 1px solid #dadada;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 300ms ease-in-out;
+}
+
+.page-item:hover{
+	background-color: dodgerblue;
+	color: #ededed;
+}
+
+.page-item.active a{
+	font-weight: bold;
+}
+
+.page-link {
+	font-size: 18px;
+	transition: background-color 300ms ease-in-out;
+}

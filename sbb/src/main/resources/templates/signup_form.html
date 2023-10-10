@@ -1,0 +1,45 @@
+<!doctype html>
+<html layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>회원가입</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/sign_form.css}">
+</head>
+
+<body>
+	<div layout:fragment="content" class="container my-3">
+		<div class="join-wrap">
+			<div class="joinPage">
+				<img th:src="@{/images/logo.png}" alt="로고이미지" width="70px" />
+				<h3>회원가입</h3>
+			</div>
+		</div>
+		<div class="joinForm">
+			<form th:action="@{/user/signup}" th:object="${userCreateForm}" method="post">
+				<div th:replace="~{form_errors :: formErrorsFragment}"></div>
+				<div class="joinBox">
+					<div class="idBox mb-3">
+						<label for="username" class="form-label">사용자ID</label>
+						<input type="text" th:field="*{username}" class="form-control">
+					</div>
+					<div class="pwBox mb-3">
+						<label for="password1" class="form-label">비밀번호</label>
+						<input type="password" th:field="*{password1}" class="form-control">
+					</div>
+					<div class="pwCheBox mb-3">
+						<label for="password2" class="form-label">비밀번호 확인</label>
+						<input type="password" th:field="*{password2}" class="form-control">
+					</div>
+					<div class="emailBox mb-3">
+						<label for="email" class="form-label">이메일</label>
+						<input type="email" th:field="*{email}" class="form-control">
+					</div>
+					<button type="submit" class="subBtn">Sing up</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

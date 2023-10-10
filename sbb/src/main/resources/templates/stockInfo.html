@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr" layout:decorate="~{layout}" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>주식정보</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/stockinfo.css}">
+</head>
+
+<body>
+	<div layout:fragment="content" class="container my-3">
+		<h2 class="title">Stock Info</h2>
+
+		<table class="tableBox">
+			<tr>
+				<th class="titleTop">기업 이름</th>
+				<th class="titleTop">현재가</th>
+				<th class="titleTop">전일대비</th>
+				<th class="titleTop">등락률</th>
+			</tr>
+			<!-- 주식 정보 행 반복 -->
+			<tr th:each="entry : ${stocks}">
+				<!-- 기업 이름 표시 -->
+				<td class="name" th:text="${#strings.replace(entry.key,'종목명 ','')}"></td>
+
+				<!-- 현재가 색상 설정 -->
+				<td th:class="${entry.value.contains('상승') ? 'positive' : 'negative'}"
+					th:text="${entry.value.split(' ')[1]}"></td>
+
+				<!-- 전일대비 설정값 7까지 있음-->
+				<td th:class="${entry.value.contains('상승') ? 'positive' : 'negative'}"
+					th:text="${entry.value.split(' ')[3]}"></td>
+
+				<!-- 등락률-->
+				<td th:class="${entry.value.contains('상승') ? 'positive' : 'negative'}"
+					th:text="${entry.value.contains('보합') ? '0%' : entry.value.contains('상승') ? '+' + entry.value.split(' ')[6] + '%' : '-' + entry.value.split(' ')[6] + '%'}">
+				</td>
+
+			</tr>
+
+		</table>
+	</div>
+
+</body>
+
+</html>

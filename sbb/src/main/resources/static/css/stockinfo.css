@@ -1,0 +1,64 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.title {
+	text-align: center;
+	color: rgb(0, 128, 255);
+}
+
+.tableBox {
+	width: 80%;
+	height: 100%;
+	border-collapse: collapse;
+	margin: 20px auto;
+}
+
+.name {
+	text-align: start;
+	width: 25%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+	width: 25%;
+}
+
+.titleTop {
+	background-color: rgb(0, 128, 255);
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.positive {
+	color: red;
+}
+
+.negative {
+	color: blue;
+}
+
+.btn-container {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.btn-primary {
+	display: inline-block;
+	padding: .5rem .75rem;
+	font-size: .875rem;
+	line-height: normal;
+	text-align: center;
+	white-space: normal;
+	vertical-align: -webkit-baseline-middle;
+	border: none !important;
+	border-radius: .25rem !important;
+	background-color: rgb(0, 128, 255);
+	color: white;
+}

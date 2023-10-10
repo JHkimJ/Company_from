@@ -1,0 +1,424 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+}
+
+.global-header{
+	width: 100%;
+	height: 100%;
+}
+
+.headerImg img {
+	width: 100%;
+	position: relative;
+}
+
+.collapse {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logoImgBox {
+	width: 100px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.logoImg {
+	filter: opacity(0.5) drop-shadow(0 0 0 #fff);
+}
+
+.nav-list {
+	height: 100%;	
+	display: flex;
+	align-items: center;
+}
+
+.nav-item {
+	width: 120px;
+	margin-right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-link {
+	font-size: 20px;
+	color: #7d7d7d;
+	transition: all 350ms ease-in-out;
+}
+
+.nav-link:hover {
+	color: #bfbfbf;
+}
+
+.searchBox {
+  border: 2px solid #fff;
+  border-radius: 13px;
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  padding: 5px;
+}
+
+.searchBox form {
+	display: flex;
+}
+
+.searchBox input {
+  width: 350px;
+  height: 35px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.searchBox input::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#searchIcon {
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  color: #fff;
+}
+
+.imgTxt {
+  margin-top: 15px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  color: white;
+}
+
+.imgTxt p {
+  width: 100%;
+  font-weight: bold;
+}
+
+.imgTxt h1 {
+  font-size: 80px;
+}
+
+
+.mainWrapper {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.iconBox{
+	width: 50%;
+	margin:0 auto;
+	display: flex;
+	align-items: center;
+}
+
+.iconBox p {
+	margin-right: 8px;
+}
+
+.map_wrap,
+.map_wrap * {
+	margin: 0;
+	padding: 0;
+	font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+	font-size: 12px;
+}
+
+.map_wrap a,
+.map_wrap a:hover,
+.map_wrap a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.map_wrap {
+	position: relative;
+	width: 100%;
+	margin: 20px auto;
+}
+
+#map {
+	width: 50%;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto 50px auto;
+	border: 3px solid lightslategray;
+	}
+
+#menu_wrap {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	bottom: 0;
+	width: 250px;
+	margin: 10px 0 30px 10px;
+	padding: 5px;
+	overflow-y: auto;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 1;
+	font-size: 12px;
+	border-radius: 10px;	
+}
+
+.bg_white {
+	background: #fff;
+}
+
+#menu_wrap hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #5F5F5F;
+	margin: 3px 0;
+}
+
+#menu_wrap .option {
+	text-align: center;
+}
+
+#menu_wrap .option p {
+	margin: 10px 0;
+}
+
+#menu_wrap .option button {
+	margin-left: 5px;
+}
+
+#placesList li {
+	list-style: none;
+}
+
+#placesList .item {
+	position: relative;
+	border-bottom: 1px solid #888;
+	overflow: hidden;
+	cursor: pointer;
+	min-height: 65px;
+}
+
+#placesList .item span {
+	display: block;
+	margin-top: 4px;
+}
+
+#placesList .item h5,
+#placesList .item .info {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#placesList .item .info {
+	padding: 10px 0 10px 55px;
+}
+
+#placesList .info .gray {
+	color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+	padding-left: 26px;
+	background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+}
+
+#placesList .info .tel {
+	color: #009900;
+}
+
+#placesList .item .markerbg {
+	float: left;
+	position: absolute;
+	width: 36px;
+	height: 37px;
+	margin: 10px 0 0 10px;
+	background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;
+}
+
+#placesList .item .marker_1 {
+	background-position: 0 -10px;
+}
+
+#placesList .item .marker_2 {
+	background-position: 0 -56px;
+}
+
+#placesList .item .marker_3 {
+	background-position: 0 -102px
+}
+
+#placesList .item .marker_4 {
+	background-position: 0 -148px;
+}
+
+#placesList .item .marker_5 {
+	background-position: 0 -194px;
+}
+
+#placesList .item .marker_6 {
+	background-position: 0 -240px;
+}
+
+#placesList .item .marker_7 {
+	background-position: 0 -286px;
+}
+
+#placesList .item .marker_8 {
+	background-position: 0 -332px;
+}
+
+#placesList .item .marker_9 {
+	background-position: 0 -378px;
+}
+
+#placesList .item .marker_10 {
+	background-position: 0 -423px;
+}
+
+#placesList .item .marker_11 {
+	background-position: 0 -470px;
+}
+
+#placesList .item .marker_12 {
+	background-position: 0 -516px;
+}
+
+#placesList .item .marker_13 {
+	background-position: 0 -562px;
+}
+
+#placesList .item .marker_14 {
+	background-position: 0 -608px;
+}
+
+#placesList .item .marker_15 {
+	background-position: 0 -654px;
+}
+
+#pagination {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#pagination a {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#pagination .on {
+	font-weight: bold;
+	cursor: default;
+	color: #777;
+}
+
+.footer-wrap {
+  margin-top: 25px;
+  background-color: #333333;
+  color: #c2c2c2;
+  padding: 0 20px;
+  height: 350px;
+}
+
+.footerTop {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid rgba(237, 237, 237, 0.3);
+}
+
+.footerTop-list {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  font-size: 18px;
+  color: rgba(237, 237, 237, 0.7);
+}
+
+.footerTop-item1 {
+  font-weight: bold;
+  color: #ededed;
+}
+
+.footerUnder {
+  display: flex;
+}
+
+.footerLogo-Txt {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 80%;
+  height: 200px;
+}
+
+.footerLogo {
+  margin: 0 20px;
+}
+
+.footerLogo img {
+  width: 80px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #fff);
+}
+
+.footerTxtBox {
+  padding: 8px;
+}
+
+.footerBtnBox {
+  margin-top: 5px;
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trafficBtn {
+  margin-bottom: 7px;
+}
+
+.footerBtnBox button {
+  margin-right: 8px;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 7px;
+  background-color: transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.footerBtnBox button:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}

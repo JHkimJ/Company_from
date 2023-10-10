@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메일 보내기 완료</title>
+	<style>
+		/* Add your CSS styles here */
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+
+		.success-container {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			margin: 20px auto;
+			max-width: 600px;
+		}
+
+		.title {
+			color: #d9534f;
+		}
+
+		.home {
+			text-decoration: none;
+			font-size: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div layout:fragment="content" class="container my-3">
+		<div class="success-container">
+			<h1 class="title">메일 보내기 성공하였습니다.</h1>
+
+			<a class="home" href="/">홈으로 가기</a>
+		</div>
+	</div>
+</body>
+
+</html>

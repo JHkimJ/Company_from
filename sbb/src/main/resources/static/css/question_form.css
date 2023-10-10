@@ -1,0 +1,17 @@
+.questionDetail {
+	width: 1000px;
+	margin: 40px auto;
+	padding: 15px;
+	box-shadow: 2px 2px 2px 2px rgba(153,153,153,0.8);
+	border-radius: 3px;
+}
+
+.mainTxt {
+	width: 800px;
+	margin: 0 auto
+}
+
+.mailForm {
+	width: 800px;
+	margin: 20px auto;
+}
