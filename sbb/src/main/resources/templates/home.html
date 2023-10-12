@@ -31,9 +31,9 @@
 						<a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/user/login}">Log in</a>
 						<a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">Log out</a>
 					</li>
-               <li class="nav-item" sec:authorize="isAnonymous()">
-                    <a class="nav-link" th:href="@{/user/signup}">Sign up</a>
-                </li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/user/signup}">Sign up</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" th:href="@{/question/list}">Q&A</a>
 					</li>
@@ -43,22 +43,9 @@
 					<li class="nav-item">
 						<a class="nav-link" th:href="@{/loadStockInfo}">Stock Info</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" th:href="@{/search}">DART</a>
-					</li>
 				</ul>
 			</div>
 			<div class="imgTxtBox">
-				<div class="searchBox">
-					<form action="https://www.google.com/search?q=" target="_blank" method="GET"> 
-						<!--/search?q= 추가 하여 바로 검색으로-->
-
-						<input name="q" type="text" placeholder="검색하시면 Google페이지로 이동합니다." size="100" />
-						<p>
-							<i class="fa-solid fa-magnifying-glass " id="searchIcon"></i>
-						</p>
-					</form>
-				</div>
 				<div class="imgTxt">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					<h1>ABOUT US</h1>
@@ -67,6 +54,87 @@
 		</header>
 
 		<main class="mainWrapper">
+
+			<div class="keywordBar">
+				<p>
+					<i class="fa-solid fa-magnifying-glass " id="searchIcon"></i>
+				</p>
+				<input type="text" class="keyword">
+			</div>
+			<div class="keywordTitle">
+				<h1>추천 검색어</h1>
+			</div>
+			<div class="keywordBox">
+				<p>
+					<a class="keywordItem" href="http://localhost:8080/question/list">게시판으로 이동하는 법</a>
+					<a class="keywordItem" href="http://localhost:8080/user/login">로그인하는 법</a>
+					<a class="keywordItem" href="http://localhost:8080/user/signup">회원가입은 어떻게?</a>
+				</p>
+			</div>
+
+			<!-- 북마크 -->
+			<h2 class="bookmarkTitle">북마크</h2>
+			<div class="bookmarkBox">
+				<h2 class="addTitle">
+					<i class="fa-regular fa-bookmark"></i>
+					북마크 추가
+				</h2>
+				<p>관심있는 기업들을 북마크에 추가하고 한눈에 확인해보세요</p>
+				<span class="markIcon"><i class="fa-solid fa-circle-plus fa-2xl"></i></span>
+			</div>
+
+			<!-- 토픽 -->
+			<div class="topicBox">
+				<div class="topicTitle">
+					<h2>토픽</h2>
+					<p class="topicTitleIcon"><i class="fa-solid fa-chevron-right"></i></p>
+				</div>
+
+				<div class="topicBtnBox">
+					<input type="radio" id="all" name="show" checked />
+					<input type="radio" id="politics" name="show" />
+					<input type="radio" id="economy" name="show" />
+					<input type="radio" id="society" name="show" />
+					<input type="radio" id="culture" name="show" />
+					<input type="radio" id="world" name="show" />
+					<div class="tab">
+						<label for="all">종합</label>
+						<label for="politics">정치</label>
+						<label for="economy">경제</label>
+						<label for="society">사회</label>
+						<label for="culture">문화</label>
+						<label for="world">세계</label>
+					</div>
+					<div class="topicContent">
+						<div class="content-dis">
+							<div>종합페이지</div>
+
+						</div>
+						<div class="content-dis">
+							<div>정치페이지</div>
+
+						</div>
+						<div class="content-dis">
+							<div>경제페이지</div>
+
+						</div>
+						<div class="content-dis">
+							<div>사회페이지</div>
+
+						</div>
+						<div class="content-dis">
+							<div>문화페이지</div>
+
+						</div>
+						<div class="content-dis">
+							<div>세계페이지</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 지도 -->
 			<div class="place">
 				<div class="iconBox">
 					<p>
@@ -94,6 +162,7 @@
 			</div>
 		</main>
 
+		<!-- footer -->
 		<footer>
 			<div class="footer-wrap">
 				<div class="footerTop">

@@ -27,7 +27,16 @@ public class StockController {
     @GetMapping("/loadStockInfo")
     public String loadStockInfo(Model model) {
         Map<String,String> codes = new HashMap<>();
-        codes.put("005930", "00126380");
+        codes.put("005930", "00126380"); // 삼성전자
+        codes.put("000660", "00164779"); // SK하이닉스
+        codes.put("046890", "00130763"); // 서울반도체	
+        codes.put("000990", "00160843"); // DB하이텍
+        codes.put("078350", "00488989"); // 한양디지텍
+        codes.put("092190", "00488402"); // 서울바이오시스
+        codes.put("033170", "00158219"); // 시그네틱스
+        
+        
+        
 // 				여러 기업의 주식 코드 목록
 //            "005930/00126380", // 삼성 0
 //            "000660/00126380", // SK하이닉스 1
@@ -59,7 +68,7 @@ public class StockController {
     }
     
     @GetMapping("/loadStockInfo/view")
-    public String loadInfoView(Model model, @RequestParam(value = "code", defaultValue = "") String code){
+    public String loadInfoView(Model model, @RequestParam(value = "code", defaultValue = "") String code) throws Exception{
         
     	/*Map<String, String> code = stockService.getStockInfo(code);
     	model.addAttribute("code" ,code);*/

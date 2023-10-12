@@ -16,30 +16,39 @@
 			</div>
 		</div>
 		<div class="joinForm">
-			<form th:action="@{/user/signup}" th:object="${userCreateForm}" method="post">
+			<form th:action="@{/user/signup}" th:object="${userCreateForm}" method="post"
+				onsubmit="return validateForm()">
 				<div th:replace="~{form_errors :: formErrorsFragment}"></div>
 				<div class="joinBox">
 					<div class="idBox mb-3">
 						<label for="username" class="form-label">사용자ID</label>
-						<input type="text" th:field="*{username}" class="form-control">
+						<input type="text" id="usernameInput" th:field="*{username}" class="form-control">
+						
 					</div>
 					<div class="pwBox mb-3">
 						<label for="password1" class="form-label">비밀번호</label>
 						<input type="password" th:field="*{password1}" class="form-control">
+						
 					</div>
 					<div class="pwCheBox mb-3">
 						<label for="password2" class="form-label">비밀번호 확인</label>
 						<input type="password" th:field="*{password2}" class="form-control">
+						
 					</div>
 					<div class="emailBox mb-3">
 						<label for="email" class="form-label">이메일</label>
 						<input type="email" th:field="*{email}" class="form-control">
+						
 					</div>
 					<button type="submit" class="subBtn">Sing up</button>
 				</div>
 			</form>
 		</div>
 	</div>
+
+	<script>
+
+	</script>
 </body>
 
 </html>

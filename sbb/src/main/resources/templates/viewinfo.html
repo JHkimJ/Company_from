@@ -1,34 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8" />
 	<title>기업의정보</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/viewinfo.css}">
 </head>
 
 <body>
 	<h1>기업정보</h1>
 
-	<table>
+	<table class="info-table">
+
 		<tr>
-			<th>기업번호</th>
-			<td th:text="${corpInfo.corpCode}"></td>
+			<th>기업명(국문) : </th>
+			<td th:text="${corpInfo.corp_name}"></td>
 		</tr>
 		<tr>
-			<th>기업명(국문)</th>
-			<td th:text="${corpInfo.corpName}"></td>
+			<th>대표자명 :  </th>
+			<td th:text="${corpInfo.ceo_nm}"></td>
 		</tr>
 		<tr>
-			<th>주식코드</th>
+			<th>기업번호 : </th>
+			<td th:text="${corpInfo.corp_code}"></td>
+		</tr>
+		<tr>
+			<th>주식번호 : </th>
 			<td th:text="${corpInfo.stock_code}"></td>
 		</tr>
-		<!-- 주소 정보도 추가하려면 아래와 같이 추가합니다. -->
+		<!--	 주소 정보도 추가하려면 아래와 같이 추가합니다. -->
 		<tr>
-			<th>주소</th>
-			<td><a th:href="@{http://localhost:8080/loadStockInfo/view(code=${corpInfo.corpCode})}"
-					th:text="${corpInfo.adres}"></a></td>>
+			<th>주소 : </th>
+			<td><a th:href="@{/loadStockInfo/view(code=${corpInfo.corp_code})}"
+					th:text="${corpInfo.adres}"></a></td>
 		<tr>
-
+		<tr>
+			<th>설립일 : </th>
+			<td th:text="${corpInfo.est_dt}"></td>
+		</tr>
+			
 	</table>
 </body>
 

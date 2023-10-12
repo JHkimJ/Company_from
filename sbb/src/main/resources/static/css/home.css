@@ -13,7 +13,7 @@ li {
 	list-style: none;
 }
 
-.global-header{
+.global-header {
 	width: 100%;
 	height: 100%;
 }
@@ -40,12 +40,8 @@ li {
 	align-items: center;
 }
 
-.logoImg {
-	filter: opacity(0.5) drop-shadow(0 0 0 #fff);
-}
-
 .nav-list {
-	height: 100%;	
+	height: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -68,71 +64,208 @@ li {
 	color: #bfbfbf;
 }
 
-.searchBox {
-  border: 2px solid #fff;
-  border-radius: 13px;
-  width: 400px;
-  height: 50px;
-  position: absolute;
-  top: 40%;
-  left: 15%;
-  padding: 5px;
-}
-
-.searchBox form {
-	display: flex;
-}
-
-.searchBox input {
-  width: 350px;
-  height: 35px;
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.searchBox input::placeholder {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-}
-
-#searchIcon {
-  width: 20px;
-  height: 20px;
-  margin: 8px;
-  color: #fff;
-}
-
 .imgTxt {
-  margin-top: 15px;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  color: white;
+	margin-top: 15px;
+	position: absolute;
+	top: 40%;
+	left: 15%;
+	color: white;
 }
 
 .imgTxt p {
-  width: 100%;
-  font-weight: bold;
+	width: 100%;
+	font-weight: bold;
 }
 
 .imgTxt h1 {
-  font-size: 80px;
+	font-size: 80px;
 }
 
 
 .mainWrapper {
 	width: 100%;
 	margin-top: 30px;
+	border: 2px solid red;
 }
 
-.iconBox{
-	width: 50%;
-	margin:0 auto;
+.keywordBar {
+	width: 63%;
+	height: 60px;
+	display: flex;
+	margin: 50px auto;
+	align-items: center;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 13px;
+
+}
+
+.keywordBar p {
+	width: 56px;
+	margin: 0;
+	padding: 10px;
+}
+
+.keyword {
+	width: 93%;
+	height: 45px;
+	border: none;
+	outline: none;
+
+}
+
+.keywordTitle {
+	width: 63%;
+	height: 100px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.keywordBox {
+	width: 63%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	border: 2px solid #000;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.keywordBox p {
+	line-height: 35px;
+}
+
+.keywordItem {
+	background: #EDEDED;
+	border-radius: 5px;
+	padding: 3px 10px 3px 10px;
+	margin: 3px;
+}
+
+.keywordItem:hover {
+	background: rgb(128, 128, 128);
+	color: #ffffff;
+	transition: all 0.25s ease-in-out;
+}
+
+.bookmarkTitle {
+	width: 63%;
+	margin: 10px auto;
+}
+
+.bookmarkBox {
+	width: 63%;
+	height: 200px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 1px solid #000000;
+	border-radius: 7px;
+	text-align: center;
+}
+
+.bookmarkBox h2 {
+	margin-bottom: 15px;
+}
+
+.bookmarkBox p {
+	margin-bottom: 15px;
+}
+
+.markIcon i {
+	width: 30px;
+	height: 30px;
+}
+
+.topicBox {
+	width: 63%;
+	height: 150px;
+	margin: 70px auto 20px auto;
+}
+
+.topicTitle {
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+}
+
+.topicTitleIcon {
+	margin-left: 5px;
+}
+
+.topicBtnBox input[type=radio] {
+	display: none;
+}
+
+#all:checked~.tab label:nth-child(1),
+#politics:checked~.tab label:nth-child(2),
+#economy:checked~.tab label:nth-child(3),
+#society:checked~.tab label:nth-child(4),
+#culture:checked~.tab label:nth-child(5),
+#world:checked~.tab label:nth-child(6) {
+	border: none;
+	background-color: black;
+	color: #fff;
+}
+
+.topicContent>div {
+	display: none;
+}
+
+#all:checked~.topicContent div:nth-child(1),
+#politics:checked~.topicContent div:nth-child(2),
+#economy:checked~.topicContent div:nth-child(3),
+#society:checked~.topicContent div:nth-child(4),
+#culture:checked~.topicContent div:nth-child(5),
+#world:checked~.topicContent div:nth-child(6) {
+	display: block;
+}
+
+.topicBtnBox {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+.tab label {
+	font-size: 18px;
+	cursor: pointer;
+	width: 70px;
+	height: 40px;
+	text-align: center;
+	padding: 15px 0;
+	margin-right: 10px;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 500ms ease-in-out;
+}
+
+.tab label:hover {
+	background-color: #e0e0e0;
+}
+
+.topicContent {
+	justify-items: stretch;
+}
+
+.place {
+	width: 63%;
+	margin: 0 auto;
+}
+
+.iconBox {
+	width: 100%;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 }
@@ -162,28 +295,29 @@ li {
 	margin: 20px auto;
 }
 
+
 #map {
-	width: 50%;
+	width: 70%;
 	height: 600px;
 	position: relative;
 	overflow: hidden;
-	margin: 0 auto 50px auto;
+	margin-left: auto;
 	border: 3px solid lightslategray;
-	}
+}
 
 #menu_wrap {
 	position: absolute;
 	top: 0;
-	left: 25%;
+	left: 0%;
 	bottom: 0;
-	width: 250px;
-	margin: 10px 0 30px 10px;
+	width: 300px;
+	height: 600px;
 	padding: 5px;
 	overflow-y: auto;
 	background: rgba(255, 255, 255, 0.7);
 	z-index: 1;
 	font-size: 12px;
-	border-radius: 10px;	
+	border: 3px solid black;
 }
 
 .bg_white {
@@ -337,88 +471,88 @@ li {
 }
 
 .footer-wrap {
-  margin-top: 25px;
-  background-color: #333333;
-  color: #c2c2c2;
-  padding: 0 20px;
-  height: 350px;
+	margin-top: 25px;
+	background-color: #333333;
+	color: #c2c2c2;
+	padding: 0 20px;
+	height: 350px;
 }
 
 .footerTop {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  border-bottom: 1px solid rgba(237, 237, 237, 0.3);
+	display: flex;
+	align-items: center;
+	height: 100px;
+	border-bottom: 1px solid rgba(237, 237, 237, 0.3);
 }
 
 .footerTop-list {
-  width: 60%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  font-size: 18px;
-  color: rgba(237, 237, 237, 0.7);
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	font-size: 18px;
+	color: rgba(237, 237, 237, 0.7);
 }
 
 .footerTop-item1 {
-  font-weight: bold;
-  color: #ededed;
+	font-weight: bold;
+	color: #ededed;
 }
 
 .footerUnder {
-  display: flex;
+	display: flex;
 }
 
 .footerLogo-Txt {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  width: 80%;
-  height: 200px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	width: 80%;
+	height: 200px;
 }
 
 .footerLogo {
-  margin: 0 20px;
+	margin: 0 20px;
 }
 
 .footerLogo img {
-  width: 80px;
-  filter: opacity(0.5) drop-shadow(0 0 0 #fff);
+	width: 80px;
+	filter: opacity(0.5) drop-shadow(0 0 0 #fff);
 }
 
 .footerTxtBox {
-  padding: 8px;
+	padding: 8px;
 }
 
 .footerBtnBox {
-  margin-top: 5px;
-  width: 200px;
-  height: 200px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	margin-top: 5px;
+	width: 200px;
+	height: 200px;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .trafficBtn {
-  margin-bottom: 7px;
+	margin-bottom: 7px;
 }
 
 .footerBtnBox button {
-  margin-right: 8px;
-  width: 150px;
-  height: 40px;
-  font-size: 16px;
-  color: #fff;
-  border: 1px solid #dadada;
-  border-radius: 7px;
-  background-color: transparent;
-  transition: all 500ms ease-in-out;
+	margin-right: 8px;
+	width: 150px;
+	height: 40px;
+	font-size: 16px;
+	color: #fff;
+	border: 1px solid #dadada;
+	border-radius: 7px;
+	background-color: transparent;
+	transition: all 500ms ease-in-out;
 }
 
 .footerBtnBox button:hover {
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
 }
