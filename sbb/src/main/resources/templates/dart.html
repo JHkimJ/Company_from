@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <title>국내 상장사 정보</title>
     <meta charset="UTF-8">
-    <title>기업 검색 결과</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>검색 결과</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>기업명</th>
-                <th>종목코드</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- 검색 결과를 반복하며 출력 -->
-            <tr th:each="company : ${companies}">
-                <td th:text="${company.corpName}"></td>
-                <td th:text="${company.stockCode}"></td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+    <body>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">홈</a></li>
+            <li><a href="howtouse.html">사용법</a></li>
+            <li><a href="list.html">기업목록</a></li>
+        </ul>
+    </nav>
+
+        <div id="logo">
+            <img src="Logo.png">
+        </div>
+
+        <div id="searchBar">
+            <input type="text" placeholder="종목명 / 종목코드를 입력하세요" size=100 onclick="alert('아직 준비중 입니다')">
+        </div>
+    </body>
 </html>
