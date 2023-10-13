@@ -1,4 +1,29 @@
-.info-table {
-	border: 1px solid;
-	
+
+/* viewinfo.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.info-table,
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th,
+table th {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.info-table td,
+table td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
 }

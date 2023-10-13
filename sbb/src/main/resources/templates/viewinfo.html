@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="kr" layout:decorate="~{layout}" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8" />
@@ -8,38 +8,94 @@
 </head>
 
 <body>
-	<h1>기업정보</h1>
-
-	<table class="info-table">
-
-		<tr>
-			<th>기업명(국문) : </th>
-			<td th:text="${corpInfo.corp_name}"></td>
-		</tr>
-		<tr>
-			<th>대표자명 :  </th>
-			<td th:text="${corpInfo.ceo_nm}"></td>
-		</tr>
-		<tr>
-			<th>기업번호 : </th>
-			<td th:text="${corpInfo.corp_code}"></td>
-		</tr>
-		<tr>
-			<th>주식번호 : </th>
-			<td th:text="${corpInfo.stock_code}"></td>
-		</tr>
-		<!--	 주소 정보도 추가하려면 아래와 같이 추가합니다. -->
-		<tr>
-			<th>주소 : </th>
-			<td><a th:href="@{/loadStockInfo/view(code=${corpInfo.corp_code})}"
-					th:text="${corpInfo.adres}"></a></td>
-		<tr>
-		<tr>
-			<th>설립일 : </th>
-			<td th:text="${corpInfo.est_dt}"></td>
-		</tr>
-			
-	</table>
+	<div layout:fragment="content" class="container my-3">
+		<form>
+			<h1>기업정보</h1>
+			<table class="info-table">
+				<tr>
+					<th>기업명(국문) : </th>
+					<td th:text="${corpInfo.corp_name}"></td>
+				</tr>
+				<tr>
+					<th>대표자명 : </th>
+					<td th:text="${corpInfo.ceo_nm}"></td>
+				</tr>
+				<tr>
+					<th>기업번호 : </th>
+					<td th:text="${corpInfo.corp_code}"></td>
+				</tr>
+				<tr>
+					<th>주식번호 : </th>
+					<td th:text="${corpInfo.stock_code}"></td>
+				</tr>
+				<!-- 주소 정보도 추가하려면 아래와 같이 추가합니다. -->
+				<tr>
+					<th>주소 : </th>
+					<td><a th:href="@{/loadStockInfo/view(code=${corpInfo.corp_code})}" th:text="${corpInfo.adres}"></a>
+					</td>
+				<tr>
+				<tr>
+					<th>설립일 : </th>
+					<td th:text="${corpInfo.est_dt}"></td>
+				</tr>
+				</tr>
+			</table>
+			<h1>재무제표</h1>
+			<table>
+				<tr>
+					<th>보고서 번호 : </th>
+					<td th:text="${corpInfo.reprt_code}"></td>
+				</tr>
+				<tr>
+					<th>기준 사업 연도 : </th>
+					<td th:text="${corpInfo.bsns_year}"></td>
+				</tr>
+				<tr>
+					<th>재무제표명 : </th>
+					<td th:text="${corpInfo.sj_nm}"></td>
+				</tr>
+				<tr>
+					<th>당기명 : </th>
+					<td th:text="${corpInfo.thstrm_nm}"></td>
+				</tr>
+				<tr>
+					<th>당기금액 : </th>
+					<td th:text="${corpInfo.thstrm_amount}"></td>
+				</tr>
+			</table>
+			<table>
+				<h1>최대주주 현황</h1>			
+				<tr>
+					<th>소유자명 : </th>
+					<td th:text="${corpInfo.nm}"></td>
+				</tr>
+				<tr>
+					<th>관계 : </th>
+					<td th:text="${corpInfo.relate}"></td>
+				</tr>
+				<tr>
+					<th>주식종류 : </th>
+					<td th:text="${corpInfo.stock_knd}"></td>
+				</tr>
+				<tr>
+					<th>기초 소유 주식 수 : </th>
+					<td th:text="${corpInfo.bsis_posesn_stock_co}"></td>
+				</tr>
+				<tr>
+					<th>기초 소유 주식 지분 율 : </th>
+					<td th:text="${corpInfo.bsis_posesn_stock_qota_rt}"></td>
+				</tr>
+				<tr>
+					<th>기말 소유 주식 수 : </th>
+					<td th:text="${corpInfo.trmend_posesn_stock_co}"></td>
+				</tr>
+				<tr>
+					<th>기말 소유 주식 지분 율 : </th>
+					<td th:text="${corpInfo.trmend_posesn_stock_qota_rt}"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </body>
 
 </html>
