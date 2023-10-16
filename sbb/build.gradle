@@ -28,29 +28,36 @@ dependencies {
 	implementation 'commons-io:commons-io:2.11.0'								// IO
 	
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'			// jackson-databind
-	implementation "org.springframework.boot:spring-boot-starter-log4j2";	    // Spring Boot Log4j2
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    runtimeOnly 'com.h2database:h2'
-    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
-    implementation 'org.commonmark:commonmark:0.21.0'
-    implementation 'org.jsoup:jsoup:1.16.1'
-    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
-    
-	
-    // webjars 추가
-    implementation 'org.webjars.npm:jquery:3.6.4'
-    implementation 'org.webjars.npm:bootstrap:5.3.0'
-    implementation 'org.webjars.npm:axios:1.4.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
+	implementation 'org.commonmark:commonmark:0.21.0'
+	implementation 'org.jsoup:jsoup:1.16.1'
+	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+	// webjars 추가
+	implementation 'org.webjars.npm:jquery:3.6.4'
+	implementation 'org.webjars.npm:bootstrap:5.3.0'
+	implementation 'org.webjars.npm:axios:1.4.0'
+
+
+
+	compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+   
+	//Json
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
+
 }
 
 

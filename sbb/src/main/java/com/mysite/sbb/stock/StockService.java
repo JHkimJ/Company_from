@@ -24,9 +24,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class StockService {
 
 	private String crtfcKey = "bfea3d8660917e68e9ca617e3c3dad789aa61a6e";
-	private String bsns_year = "2022";
-	private String reprt_code = "11011";
-	private String fs_div = "OFS";
+	private String bsns_year = "2022";		// 연도
+	private String reprt_code = "11011";	// 11011 : 사업보고서,
+											// 11012 : 반기보고서,
+											// 11013 : 1분기보고서,
+											// 11014 : 3분기보고서
+	private String fs_div = "OFS";			// OFS : 재무제표 , CFS : 연결재무제표
 	
 	public Map<String, String> getStockPrices(Map<String, String> codes) {
 		Map<String, String> stocks = new HashMap<>();

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메일 보내기</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/email.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+
+	<div layout:fragment="content" class="compose-container">
+		<h1 class="mailText">메일 보내기</h1>
+		<form th:action="@{/send-email}" method="POST" th:object="${emailRequest}" enctype="multipart/form-data">
+			<!-- 받는 사람-->
+			<label class="labelTitle" for="to">받는 사람</label>
+			<input class="mailInp" type="email" id="to" name="to" th:field="*{to}" required>
+
+			<!-- 제목 -->
+			<label class="labelTitle" for="subject">제목</label>
+			<input class="mailInp" type="text" id="subject" name="subject" th:field="*{subject}" required>
+
+			<!-- 내용 -->
+			<label class="labelTitle" for="text">내용</label>
+			<textarea class="mailInp" id="text" name="text" th:field="*{text}" rows="4" required></textarea><br>
+
+			<!-- 파일 첨부-->
+			<div class="file-submit-box">
+    <div class="fileBox">
+        <p>첨부파일</p>
+        <label class="iconLabel" for="file">
+            <i class="fa-solid fa-paperclip"></i>
+            <span id="selectedFileName">파일 선택</span>
+            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" onchange="displayFileName(this)">
+        </label>
+    </div>
+    <button type="submit">전송</button>
+</div>
+<p id="fileNotSelectedText" style="display: none;">선택한 파일 없음</p>
+
+<script>
+    function displayFileName(input) {
+        const selectedFileName = document.getElementById("selectedFileName");
+        const fileNotSelectedText = document.getElementById("fileNotSelectedText");
+        
+        if (input.files.length > 0) {
+            selectedFileName.textContent = input.files[0].name;
+            fileNotSelectedText.style.display = "none";
+        } else {
+            selectedFileName.textContent = "파일 선택";
+            fileNotSelectedText.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+
+</html>

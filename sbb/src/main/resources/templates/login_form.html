@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<title>로그인</title>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}">
 </head>
 
 <body>
@@ -33,15 +34,20 @@
 			<!-- 로그인 버튼 -->
 			<button type='submit' class='btn btn-primary'>로그인</button>
 			<button type='submit' class='kakaoBtn'>
+				<a th:href="@{|${kakaoUrl}|}">
 				<img th:src="@{/images/카카오톡2.png}">
 				카카오 로그인
+				</a>
 			</button>
+			
+
+
 
 		</form>
 
 		<!-- 회원가입 버튼 -->
 		<form th:action='@{/user/signup}' method='post'>
-			<button type='submit' class='btn btn-primary2'>회원가입</button>
+			<button type='submit' class='btn btn-primary2'>Sign up</button>
 		</form>
 
 	</div>

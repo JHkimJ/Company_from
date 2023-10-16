@@ -3087,3 +3087,484 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2023-10-13 15:12:53,683 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
 2023-10-13 15:12:53,694 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
 2023-10-13 15:12:53,706 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-13 15:30:03,119 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-13 15:30:03,125 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-13 15:30:03,935 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13 15:30:04,122 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 177 ms. Found 3 JPA repository interfaces.
+2023-10-13 15:30:04,898 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-13 15:30:05,004 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1878 ms
+2023-10-13 15:30:06,749 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13 15:30:09,972 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]] [n/a]
+2023-10-13 15:30:09,973 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]] [n/a]
+2023-10-13 15:30:09,987 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-13 15:30:10,012 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1158) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-3.1.4.jar:3.1.4]
+	at com.mysite.sbb.SbbApplication.main(SbbApplication.java:13) [main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.1.4.jar:3.1.4]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 21 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 21 more
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: "C:/Users/inside2u/local.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:212) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.Store.<init>(Store.java:145) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Database.<init>(Database.java:324) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/inside2u/local.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.FileStore.open(FileStore.java:178) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.FileStore.open(FileStore.java:128) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.Store.<init>(Store.java:136) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Database.<init>(Database.java:324) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 21 more
+2023-10-13 16:06:34,276 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(385)-127.0.0.1] Application shutdown requested.
+2023-10-13 16:06:34,306 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(385)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13 16:09:00,551 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-13 16:09:00,557 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-13 16:09:01,273 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13 16:09:01,432 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 150 ms. Found 3 JPA repository interfaces.
+2023-10-13 16:09:02,093 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-13 16:09:02,195 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1637 ms
+2023-10-13 16:09:02,507 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-13 16:09:03,002 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13 16:09:04,098 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13 16:09:04,364 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-13 16:09:04,451 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13 16:09:04,843 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-13 16:09:04,975 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13 16:09:05,123 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c7946f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f4fb056, org.springframework.security.web.context.SecurityContextHolderFilter@6630c260, org.springframework.security.web.header.HeaderWriterFilter@3d2525b2, org.springframework.security.web.csrf.CsrfFilter@333ec325, org.springframework.security.web.authentication.logout.LogoutFilter@4b93f330, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@28b952ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ad6e4a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44abdc7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bd96910, org.springframework.security.web.access.ExceptionTranslationFilter@6a662698, org.springframework.security.web.access.intercept.AuthorizationFilter@3c15d59]
+2023-10-13 16:09:05,671 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-13 16:09:05,711 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13 16:09:13,164 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-13 16:09:13,166 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-10-13 16:25:58,885 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(26)-127.0.0.1] Application shutdown requested.
+2023-10-13 16:25:58,924 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(26)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13 16:32:17,852 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-13 16:32:17,863 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-13 16:32:18,969 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13 16:32:19,434 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 452 ms. Found 3 JPA repository interfaces.
+2023-10-13 16:32:20,521 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-13 16:32:20,701 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2836 ms
+2023-10-13 16:32:21,398 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-13 16:32:23,657 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13 16:32:25,416 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13 16:32:25,763 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-13 16:32:25,887 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13 16:32:26,450 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-13 16:32:26,705 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13 16:32:26,960 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b441c74, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e4f3e2d, org.springframework.security.web.context.SecurityContextHolderFilter@2077cb40, org.springframework.security.web.header.HeaderWriterFilter@28f34174, org.springframework.security.web.csrf.CsrfFilter@22d52718, org.springframework.security.web.authentication.logout.LogoutFilter@69a9b835, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5db7b95, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cce5193, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e97624e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@420cc36f, org.springframework.security.web.access.ExceptionTranslationFilter@1ca9503d, org.springframework.security.web.access.intercept.AuthorizationFilter@120dc58]
+2023-10-13 16:32:27,692 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-13 16:32:27,752 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13 16:32:27,979 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-13 16:32:27,981 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-10-13 16:32:53,369 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2023-10-13 16:32:53,429 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:48:29,480 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-16 09:48:29,490 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-16 09:48:30,335 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:48:30,524 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 177 ms. Found 3 JPA repository interfaces.
+2023-10-16 09:48:31,250 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:48:31,358 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1866 ms
+2023-10-16 09:48:31,701 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:48:32,254 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:48:33,450 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:48:33,717 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:48:33,807 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-16 09:48:34,213 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:48:34,364 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:48:34,512 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a8a3c6e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59f87672, org.springframework.security.web.context.SecurityContextHolderFilter@6a7f9111, org.springframework.security.web.header.HeaderWriterFilter@4de88cb9, org.springframework.security.web.csrf.CsrfFilter@1dea2235, org.springframework.security.web.authentication.logout.LogoutFilter@5a8c2316, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3359e4f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32180fc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f6248f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@124f886, org.springframework.security.web.access.ExceptionTranslationFilter@2f36ad9d, org.springframework.security.web.access.intercept.AuthorizationFilter@3cb6f0bb]
+2023-10-16 09:48:35,126 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:48:35,172 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:13,164 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2023-10-16 09:50:13,219 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:13,581 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:13,598 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:13,735 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:13,767 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 398 ms
+2023-10-16 09:50:13,796 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:13,842 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:13,927 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:13,993 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:14,055 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:14,091 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:14,137 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:14,175 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ba956bd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e875123, org.springframework.security.web.context.SecurityContextHolderFilter@5de4cb45, org.springframework.security.web.header.HeaderWriterFilter@2d64144c, org.springframework.security.web.csrf.CsrfFilter@556434a7, org.springframework.security.web.authentication.logout.LogoutFilter@6b3950b8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ab479c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29d11d52, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d37ae8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7962bf1, org.springframework.security.web.access.ExceptionTranslationFilter@7367c83, org.springframework.security.web.access.intercept.AuthorizationFilter@6a40670d]
+2023-10-16 09:50:14,353 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:14,367 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:14,376 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:50:25,103 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 09:50:25,120 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-8] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:25,479 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:25,494 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:25,613 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:25,644 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 392 ms
+2023-10-16 09:50:25,675 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:25,717 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:25,792 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:25,852 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:25,909 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:25,940 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:25,983 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:26,021 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65e886d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@493ba8f1, org.springframework.security.web.context.SecurityContextHolderFilter@7027936f, org.springframework.security.web.header.HeaderWriterFilter@38ef5d16, org.springframework.security.web.csrf.CsrfFilter@79947bc9, org.springframework.security.web.authentication.logout.LogoutFilter@1713b05d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ff35228, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a37e491, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19a6056a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a00c484, org.springframework.security.web.access.ExceptionTranslationFilter@1f559efb, org.springframework.security.web.access.intercept.AuthorizationFilter@2b31052f]
+2023-10-16 09:50:26,196 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:26,207 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:26,216 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:50:33,934 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 09:50:33,949 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-12] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:34,271 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:34,288 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:34,413 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:34,449 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 387 ms
+2023-10-16 09:50:34,478 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:34,521 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:34,604 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:34,677 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:34,754 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:34,790 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:34,845 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:34,882 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d064102, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b66c753, org.springframework.security.web.context.SecurityContextHolderFilter@17c8e94e, org.springframework.security.web.header.HeaderWriterFilter@18676836, org.springframework.security.web.csrf.CsrfFilter@3cad173, org.springframework.security.web.authentication.logout.LogoutFilter@1dbc9149, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3449b81b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42dce38d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eeb6000, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c7ab6e1, org.springframework.security.web.access.ExceptionTranslationFilter@6119a046, org.springframework.security.web.access.intercept.AuthorizationFilter@d074583]
+2023-10-16 09:50:35,057 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:35,071 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:35,079 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:50:41,732 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2023-10-16 09:50:41,756 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-16] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:42,301 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:42,321 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:42,443 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:42,482 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 542 ms
+2023-10-16 09:50:42,511 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:42,564 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:42,649 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:42,719 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:42,787 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:42,819 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:42,864 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:42,918 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75a7b7f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a7e1e56, org.springframework.security.web.context.SecurityContextHolderFilter@76df8e0b, org.springframework.security.web.header.HeaderWriterFilter@6a6684c6, org.springframework.security.web.csrf.CsrfFilter@19b870cc, org.springframework.security.web.authentication.logout.LogoutFilter@57b5be06, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f187d9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cbbbe0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38e287a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e19a0f0, org.springframework.security.web.access.ExceptionTranslationFilter@25d15978, org.springframework.security.web.access.intercept.AuthorizationFilter@54b01071]
+2023-10-16 09:50:43,118 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:43,132 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:43,141 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:50:44,565 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2023-10-16 09:50:44,581 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-20] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:44,904 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:44,916 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:45,064 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:45,099 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 418 ms
+2023-10-16 09:50:45,131 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:45,178 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:45,269 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:45,336 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:45,397 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:45,431 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:45,481 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:45,534 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e1bec30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@452e60db, org.springframework.security.web.context.SecurityContextHolderFilter@6ef5831d, org.springframework.security.web.header.HeaderWriterFilter@7e41cf04, org.springframework.security.web.csrf.CsrfFilter@1a81aabf, org.springframework.security.web.authentication.logout.LogoutFilter@f1b21da, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78580710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7936182e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d7d6f5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7490086b, org.springframework.security.web.access.ExceptionTranslationFilter@57f26fb1, org.springframework.security.web.access.intercept.AuthorizationFilter@10742f6a]
+2023-10-16 09:50:45,746 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:45,773 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:45,786 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:50:50,354 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 09:50:50,368 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-24] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:50,653 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 09:50:50,666 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2023-10-16 09:50:50,777 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 09:50:50,807 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 355 ms
+2023-10-16 09:50:50,835 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 09:50:50,875 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 09:50:50,930 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 09:50:50,993 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 09:50:51,048 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 09:50:51,080 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 09:50:51,126 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 09:50:51,164 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5791094c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10b548c5, org.springframework.security.web.context.SecurityContextHolderFilter@36ca03a3, org.springframework.security.web.header.HeaderWriterFilter@118e7d28, org.springframework.security.web.csrf.CsrfFilter@5d383821, org.springframework.security.web.authentication.logout.LogoutFilter@1ef96b73, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e64890, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a2fcc6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1acde18e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38beaa, org.springframework.security.web.access.ExceptionTranslationFilter@1504aada, org.springframework.security.web.access.intercept.AuthorizationFilter@3fd5e910]
+2023-10-16 09:50:51,332 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 09:50:51,345 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 09:50:51,351 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 09:53:09,639 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-16 09:53:09,641 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-10-16 10:10:33,521 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:10:33,540 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-28] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:10:33,863 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:10:33,877 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:10:33,998 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:10:34,030 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 367 ms
+2023-10-16 10:10:34,056 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:10:34,105 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:10:34,159 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:10:34,228 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:10:34,283 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:10:34,312 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:10:34,362 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:10:34,403 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a7380ad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5139b579, org.springframework.security.web.context.SecurityContextHolderFilter@3da08983, org.springframework.security.web.header.HeaderWriterFilter@7f8cd9c4, org.springframework.security.web.csrf.CsrfFilter@59c8b029, org.springframework.security.web.authentication.logout.LogoutFilter@2b28271c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42f2c9cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21752fe6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@324e384, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bf6fd0c, org.springframework.security.web.access.ExceptionTranslationFilter@426c03f7, org.springframework.security.web.access.intercept.AuthorizationFilter@672faf55]
+2023-10-16 10:10:34,588 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:10:34,600 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:10:34,606 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:11:43,368 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:11:43,383 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-32] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:11:43,700 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:11:43,712 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:11:43,826 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:11:43,859 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 350 ms
+2023-10-16 10:11:43,885 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:11:43,932 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:11:43,981 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:11:44,039 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:11:44,096 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:11:44,124 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:11:44,165 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:11:44,208 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@175ed279, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f91342d, org.springframework.security.web.context.SecurityContextHolderFilter@479eed84, org.springframework.security.web.header.HeaderWriterFilter@35e0670a, org.springframework.security.web.csrf.CsrfFilter@16b1e2f2, org.springframework.security.web.authentication.logout.LogoutFilter@53603ede, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@459a82da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e2121f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55ccf867, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b46e02b, org.springframework.security.web.access.ExceptionTranslationFilter@26c5a470, org.springframework.security.web.access.intercept.AuthorizationFilter@36245ce8]
+2023-10-16 10:11:44,375 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:11:44,387 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:11:44,393 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:14:37,290 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-16 10:14:37,292 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-10-16 10:18:16,358 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:18:16,375 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-36] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:18:16,675 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:18:16,689 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:18:16,811 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:18:16,842 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 355 ms
+2023-10-16 10:18:16,872 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:18:16,918 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:18:16,981 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:18:17,045 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:18:17,105 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:18:17,134 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:18:17,180 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:18:17,219 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@792e8f7d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42bdc43f, org.springframework.security.web.context.SecurityContextHolderFilter@74a21172, org.springframework.security.web.header.HeaderWriterFilter@2339083b, org.springframework.security.web.csrf.CsrfFilter@39ffbcd2, org.springframework.security.web.authentication.logout.LogoutFilter@37fb65ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7f03a1e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@307f2a18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71c3a295, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f22d019, org.springframework.security.web.access.ExceptionTranslationFilter@7626eb61, org.springframework.security.web.access.intercept.AuthorizationFilter@40f3b63f]
+2023-10-16 10:18:17,402 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:18:17,415 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:18:17,422 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:18:24,076 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:18:24,099 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-40] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:18:24,400 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:18:24,414 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:18:24,526 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:18:24,559 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 348 ms
+2023-10-16 10:18:24,589 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:18:24,633 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:18:24,696 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:18:24,774 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:18:24,831 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:18:24,866 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:18:24,908 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:18:24,945 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e98418e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ea539b5, org.springframework.security.web.context.SecurityContextHolderFilter@3a2f3f67, org.springframework.security.web.header.HeaderWriterFilter@3273a4b6, org.springframework.security.web.csrf.CsrfFilter@24f610f3, org.springframework.security.web.authentication.logout.LogoutFilter@39b078c8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24541bf4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e4ac159, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@555eece5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63d607ec, org.springframework.security.web.access.ExceptionTranslationFilter@4dd6d732, org.springframework.security.web.access.intercept.AuthorizationFilter@6313c3be]
+2023-10-16 10:18:25,106 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:18:25,119 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:18:25,125 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:18:25,524 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-16 10:18:25,527 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-10-16 10:20:32,008 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:20:32,023 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-44] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:20:32,330 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:20:32,344 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:20:32,467 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:20:32,501 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 366 ms
+2023-10-16 10:20:32,532 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:20:32,572 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:20:32,617 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:20:32,675 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:20:32,730 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:20:32,766 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:20:32,809 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:20:32,846 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26739098, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d5d8c39, org.springframework.security.web.context.SecurityContextHolderFilter@3305667b, org.springframework.security.web.header.HeaderWriterFilter@4707e62a, org.springframework.security.web.csrf.CsrfFilter@64593ccc, org.springframework.security.web.authentication.logout.LogoutFilter@1b911e80, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3505fda6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e17938b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bf109c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30268d42, org.springframework.security.web.access.ExceptionTranslationFilter@7d130213, org.springframework.security.web.access.intercept.AuthorizationFilter@4a74fc4c]
+2023-10-16 10:20:33,004 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:20:33,016 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:20:33,023 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:25:29,369 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(64)-127.0.0.1] Application shutdown requested.
+2023-10-16 10:25:29,391 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(64)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:38:42,560 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-16 10:38:42,566 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-16 10:38:43,435 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:38:43,595 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 150 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:38:44,241 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:38:44,337 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1770 ms
+2023-10-16 10:38:44,643 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:38:45,129 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:38:46,259 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:38:46,519 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:38:46,598 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-16 10:38:46,994 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:38:47,046 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:38:47,162 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:38:47,304 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11210916, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@597a2741, org.springframework.security.web.context.SecurityContextHolderFilter@2ccf5d4a, org.springframework.security.web.header.HeaderWriterFilter@74e19535, org.springframework.security.web.csrf.CsrfFilter@422c0459, org.springframework.security.web.authentication.logout.LogoutFilter@530644fe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7353a1cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@172fb5fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e03bfaf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4934b973, org.springframework.security.web.access.ExceptionTranslationFilter@34e9d0ae, org.springframework.security.web.access.intercept.AuthorizationFilter@55d8048b]
+2023-10-16 10:38:47,860 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:38:47,898 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:38:51,457 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-16 10:38:51,458 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-10-16 10:57:18,936 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:57:18,982 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:57:19,512 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:57:19,529 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:57:19,706 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:57:19,741 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 527 ms
+2023-10-16 10:57:19,774 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:57:19,828 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:57:19,943 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:57:20,044 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:57:20,119 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:57:20,158 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:57:20,217 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:57:20,262 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50d2461e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2890573e, org.springframework.security.web.context.SecurityContextHolderFilter@934e03, org.springframework.security.web.header.HeaderWriterFilter@1e7a699a, org.springframework.security.web.csrf.CsrfFilter@16c70ebb, org.springframework.security.web.authentication.logout.LogoutFilter@55f88e2c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4667c536, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e0f2a7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55f13b1d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cfdfdb8, org.springframework.security.web.access.ExceptionTranslationFilter@1b4c1931, org.springframework.security.web.access.intercept.AuthorizationFilter@4ecb5652]
+2023-10-16 10:57:20,492 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:57:20,505 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:57:20,513 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:57:54,192 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-16 10:57:54,210 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-8] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:57:54,555 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-16 10:57:54,579 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2023-10-16 10:57:54,715 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-16 10:57:54,749 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 414 ms
+2023-10-16 10:57:54,781 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-10-16 10:57:54,830 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-16 10:57:54,920 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-16 10:57:55,026 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.question.QuestionRepository
+2023-10-16 10:57:55,092 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.user.UserRepository
+2023-10-16 10:57:55,157 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [restartedMain] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.mysite.sbb.bookmark.BookmarkRepository
+2023-10-16 10:57:55,253 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-16 10:57:55,321 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7da21e69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fc47d29, org.springframework.security.web.context.SecurityContextHolderFilter@73fbf4fb, org.springframework.security.web.header.HeaderWriterFilter@387901df, org.springframework.security.web.csrf.CsrfFilter@544e1803, org.springframework.security.web.authentication.logout.LogoutFilter@efda008, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e3c1046, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57517487, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@528a40e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@113e27c9, org.springframework.security.web.access.ExceptionTranslationFilter@4f5940e4, org.springframework.security.web.access.intercept.AuthorizationFilter@52d987a7]
+2023-10-16 10:57:55,583 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-16 10:57:55,596 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-16 10:57:55,604 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-16 10:59:24,111 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-16 10:59:24,115 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-10-16 11:54:54,648 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(90)-127.0.0.1] Application shutdown requested.
+2023-10-16 11:54:54,668 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(90)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'

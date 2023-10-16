@@ -10,12 +10,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<meta name="_csrf" th:content="${_csrf.token}" />
+	<meta name="_csrf_header" th:content="${_csrf.headerName}" />
 </head>
 
 
 
 
-<body>
+<body onload="displayBookmarks()">
 	<div layout:fragment="content" class="container">
 		<header class="global-header">
 			<div class="headerImg">
@@ -75,12 +78,16 @@
 			<!-- 북마크 -->
 			<h2 class="bookmarkTitle">북마크</h2>
 			<div class="bookmarkBox">
-				<h2 class="addTitle">
-					<i class="fa-regular fa-bookmark"></i>
-					북마크 추가
-				</h2>
-				<p>관심있는 기업들을 북마크에 추가하고 한눈에 확인해보세요</p>
-				<span class="markIcon"><i class="fa-solid fa-circle-plus fa-2xl"></i></span>
+				<div id="addBookmarkSection" class="bookmarkItem">
+					<h2 class="addTitle">
+						<i class="fa-regular fa-bookmark"></i>
+						북마크 추가
+					</h2>
+					<p>관심있는 기업들을 북마크에 추가하고 한눈에 확인해보세요</p>
+					<span><i class="fa-solid fa-circle-plus fa-2x"></i></span>
+				</div>
+				<!-- 여기에 북마크 목록이 표시됩니다 -->
+				<ul id='bookmark-list'></ul>
 			</div>
 
 			<!-- 토픽 -->
@@ -92,26 +99,20 @@
 
 				<div class="topicBtnBox">
 					<input type="radio" id="all" name="show" checked />
-					<input type="radio" id="politics" name="show" />
 					<input type="radio" id="economy" name="show" />
 					<input type="radio" id="society" name="show" />
-					<input type="radio" id="culture" name="show" />
 					<input type="radio" id="world" name="show" />
+					<input type="radio" id="IT" name="show" />
 					<div class="tab">
 						<label for="all">종합</label>
-						<label for="politics">정치</label>
 						<label for="economy">경제</label>
 						<label for="society">사회</label>
-						<label for="culture">문화</label>
 						<label for="world">세계</label>
+						<label for="IT">IT</label>
 					</div>
 					<div class="topicContent">
 						<div class="content-dis">
 							<div>종합페이지</div>
-
-						</div>
-						<div class="content-dis">
-							<div>정치페이지</div>
 
 						</div>
 						<div class="content-dis">
@@ -123,11 +124,11 @@
 
 						</div>
 						<div class="content-dis">
-							<div>문화페이지</div>
+							<div>세계페이지</div>
 
 						</div>
 						<div class="content-dis">
-							<div>세계페이지</div>
+							<div>IT페이지</div>
 
 						</div>
 					</div>
@@ -329,29 +330,218 @@
 			map.setBounds(bounds);
 		}
 
-		// 검색결과 항목을 Element로 반환하는 함수입니다
-		function getListItem(index, places) {
 
-			var el = document.createElement('li'),
-				itemStr = '<span class="markerbg marker_' + (index + 1) + '"></span>' +
-					'<div class="info">' +
-					'   <h5>' + places.place_name + '</h5>';
 
-			if (places.road_address_name) {
-				itemStr += '    <span>' + places.road_address_name + '</span>' +
-					'   <span class="jibun gray">' + places.address_name + '</span>';
+		// 리스트 아이템 생성 함수 (북마크 아이콘 포함)
+		function getListItem(index, place) {
+			var listItem = document.createElement('li');
+
+			var itemStr =
+				'<span class="markerbg marker_' +
+				(index + 1) +
+				'"></span>' +
+				'<div class="info">' +
+				'   <h5>' +
+				place.place_name +
+				'</h5>';
+
+			if (place.road_address_name) {
+				itemStr +=
+					'<span>' +
+					place.road_address_name +
+					'</span>' +
+					'<span class="jibun gray">' +
+					place.address_name +
+					'</span>';
 			} else {
-				itemStr += '    <span>' + places.address_name + '</span>';
+				itemStr += '<span>' + place.address_name + '</span>';
 			}
 
-			itemStr += '  <span class="tel">' + places.phone + '</span>' +
-				'</div>';
+			// localStorage에서 저장된 북마크 목록을 가져옵니다.
+			var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+			var isBookmarked = bookmarks.includes(place.place_name);
 
-			el.innerHTML = itemStr;
-			el.className = 'item';
+			var bookmarkClass = isBookmarked ? "fas fa-bookmark fa-2x bookmark-icon selected" : "fas fa-bookmark fa-2x bookmark-icon";
 
-			return el;
+			itemStr +=
+				'<i class="' +
+				bookmarkClass + '" data-index="' +
+				index.toString() + '" data-name="' + place.place_name + '"></i>';
+
+			// itemStr +=
+			//	'<i class="fas fa-bookmark fa-2x bookmark-icon" data-index="' +
+			//	index.toString() + '" data-name="' + place.place_name + '"></i>';
+
+			itemStr += ' <span class="tel">' + place.phone + ' </span></div>';
+
+			listItem.innerHTML = itemStr;
+			listItem.className = "item";
+
+			// 별 아이콘 클릭 이벤트 리스너 등록
+			var bookmarkIcon = listItem.querySelector(".bookmark-icon");
+			bookmarkIcon.addEventListener("click", function () {
+				toggleBookmark(index);
+			});
+
+			return listItem;
 		}
+
+		window.onload = function () {
+			updateBookmark();
+			displayBookmarks();
+		}
+
+		function updateBookmark() {
+			var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+			var addBookmarkSection = document.querySelector('#addBookmarkSection');
+
+			// 북마크가 이미 있으면 '북마크 추가' 섹션을 숨김
+			if (bookmarks.length > 0 && addBookmarkSection) {
+				addBookmarkSection.style.display = 'none';
+			} else if (addBookmarkSection) { // 모든 북마크가 삭제되었다면 '북마크 추가' 섹션을 다시 보여줌
+				addBookmarkSection.style.display = '';
+			}
+		}
+
+		// 새로운 북마크를 서버에 추가
+		function addBookmark(bookmark) {
+			// '/api/bookmarks' 엔드포인트로 POST요청을 보냄
+			// 이 요청은 새로운 북마크 정보를 JSON 형식으로 포함
+			fetch('/api/bookmarks', {
+				method: 'POST',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify(bookmark)
+			})
+				.then(function (response) {
+					if (!response.ok) throw new Error("요청 실패");
+					return response.json();
+				})
+				.then(function (data) {
+					console.log('북마크가 추가되었습니다.');
+
+
+				})
+				.catch(function (error) {
+					console.error(error);
+				})
+
+			// 북마크 객체 생성
+			var bookmark = {
+				name: "북마크",
+				url: "https://example.com"
+			};
+
+			// 함수 호출하여 북마크 추가
+			addBookmark(bookmark);
+		}
+
+		// 서버에서 모든 북마크 정보를 가져옴
+		function getAllBookmarks() {
+			fetch('api/bookmarks')
+				.then(function (response) {
+					if (response.ok) throw new Error("요청 실패");
+					return response.json();
+				})
+				.then(function (data) {
+					console.log("검색된 북마크 : ", data);
+
+					data.forEach((bookmark, index) => {
+						console.log(`Bookmark ${index + 1} : ${bookmark.name}`);
+					});
+
+				})
+				.catch(function (error) {
+					console.error(error);
+				});
+		}
+
+		// 로컬 스토리지에 저장된 모든 북마크를 정보를 화면에 표시함
+		function displayBookmarks() {
+			var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+			var bookmarkList = document.getElementById('bookmark-list');
+
+			bookmarkList.innerHTML = '';
+
+			bookmarks.forEach(function (bookmark) {
+				var listItem = document.createElement('li');
+				listItem.textContent = bookmark;
+
+				listItem.addEventListener('click', function (e) {
+					removeBookmark(e.target.textContent);
+				});
+
+				bookmarkList.appendChild(listItem);
+			});
+
+			// 북마크가 있다면 아이콘 색상 변경
+			if (bookmarks.length > 0) {
+				document.querySelector('.bookmark-icon').style.color = 'blue';
+			}
+		}
+
+		function removeBookmark(bookmarkName) {
+			var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+			if (bookmarks.includes(bookmarkName)) {
+				bookmarks.splice(bookmarks.indexOf(bookmarkName), 1);
+
+				localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+
+				alert(`${bookmarkName} 삭제 되었습니다.`);
+
+				updateBookmark();
+				displayBookmarks();
+
+				// 다시 최신의 북마크 리스트를 가져옴
+				bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+				// 북마크가 모두 삭제되었다면 아이콘 색상 변경
+				if (bookmarks.length === 0) {
+					document.querySelector('.bookmark-icon').style.color = 'black';
+				}
+			}
+		}
+
+
+		// 특정 위치의 상태(즐겨찾기 된 상태와 그렇지 않은 상태 사이의 전환)
+		// 변경하는 역할
+		function toggleBookmark(index) {
+			var placesListElement = document.getElementById('placesList');
+			var placeNameElement = placesListElement.children[index].querySelector('[data-name]');
+
+			if (!placeNameElement) return;
+
+			var placeName = placeNameElement.getAttribute('data-name');
+
+			if (!placeName) return;
+
+			var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+			if (bookmarks.includes(placeName)) {
+				bookmarks.splice(bookmarks.indexOf(placeName), 1);
+
+				placeNameElement.classList.remove('selected');
+
+				alert(`${placeName} 삭제 되었습니다.`);
+
+			} else {
+				bookmarks.push(placeName);
+
+
+				placeNameElement.classList.add('selected');
+
+				alert(`${placeName} 추가 되었습니다.`);
+
+			}
+
+			localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+
+			updateBookmark();
+
+			displayBookmarks();
+		}
+
 
 		// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 		function addMarker(position, idx, title) {

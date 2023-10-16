@@ -3,55 +3,66 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}">
+	
 </head>
-	<body>
-		<nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="/"><img th:src="@{/images/logo.png}" alt="로고이미지" width="50px" /></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<!-- Display welcome message for authenticated users -->
-				<li class="userId" th:if="${#authorization.expression('isAuthenticated()')}">
+
+<body>
+	<nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+		<div class="container-fluid">
+			<div class="logoIdBox">
+				<div>
+					<a class="navbar-brand" href="/"><img th:src="@{/images/logo.png}" alt="로고이미지" width="50px" /></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="userId" th:if="${#authorization.expression('isAuthenticated()')}">
 					<!--<span>Welcome, [[@{#authentication.username}]]</span>-->
 					<span class="author-dsiplay" th:text="${#authentication.name}"></span>
 					<span>님 환영합니다.</span>
-				</li>
-				<!-- 로그인 -->
-				<li class="nav-item" sec:authorize="isAnonymous()">
-					<a class="nav-link" th:href="@{/user/login}">Log in</a>
-				</li>
-				<!-- 로그아웃 -->
-				<li class="nav-item" sec:authorize="isAuthenticated()">
-					<a class="nav-link" th:href="@{/user/logout}">Log out</a>
-				</li>
-				<!-- Hide the "Sign up" link when the user is authenticated -->
-				<!-- 회원가입 -->
-				<li class="nav-item" sec:authorize="isAnonymous()">
-					<a class="nav-link" th:href="@{/user/signup}">Sign up</a>
-				</li>
-				
-				<!-- Q&A -->
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/question/list}">Q&A</a>
-				</li>
-				
-				<!-- 이메일 -->
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/email}">Email</a>
-				</li>
-				
-				<!-- 주식 -->
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/loadStockInfo}">Stock Info</a>
-				</li>
-			</ul>
+				</div>
+			</div>
+			<div class="navBox" id="">
+				<ul class="navList">
+					<!-- Display welcome message for authenticated users -->
+
+					<!-- 로그인 -->
+					<li class="nav-item" sec:authorize="isAnonymous()">
+						<a class="nav-link" th:href="@{/user/login}">Log in</a>
+					</li>
+					<!-- 로그아웃 -->
+					<li class="nav-item" sec:authorize="isAuthenticated()">
+						<a class="nav-link" th:href="@{/user/logout}">Log out</a>
+					</li>
+					<!-- Hide the "Sign up" link when the user is authenticated -->
+					<!-- 회원가입 -->
+					<li class="nav-item" sec:authorize="isAnonymous()">
+						<a class="nav-link" th:href="@{/user/signup}">Sign up</a>
+					</li>
+
+					<!-- Q&A -->
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/question/list}">Q&A</a>
+					</li>
+
+					<!-- 이메일 -->
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/email}">Email</a>
+					</li>
+
+					<!-- 주식 -->
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/loadStockInfo}">Stock Info</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/dart}">DART</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
-</nav>
-	</body>
+	</nav>
+</body>
+
 </html>

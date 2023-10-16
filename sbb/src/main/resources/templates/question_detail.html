@@ -1,4 +1,11 @@
+<!DOCTYPE html>
 <html layout:decorate="~{layout}">
+	<head>
+	<meta charset="UTF-8" />
+	<title>Q&A</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}">
+	</head>
+	<body>
 <div layout:fragment="content" class="container my-3">
     <!-- 질문 -->
     <h2 class="border-bottom py-2" th:text="${question.subject}"></h2>
@@ -99,4 +106,5 @@ Array.from(recommend_elements).forEach(function(element) {
     });
 });
 </script>
+</body>
 </html>

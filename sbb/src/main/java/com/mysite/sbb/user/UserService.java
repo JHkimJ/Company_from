@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.mysite.sbb.DataNotFoundException;
 
 import lombok.RequiredArgsConstructor;
+import lombok.Value;
 
 @RequiredArgsConstructor
 @Service
@@ -33,4 +34,25 @@ public class UserService {
             throw new DataNotFoundException("siteuser not found");
         }
     }
+    
+//    @Value("${kakao.client.id}")
+//    private String KAKAO_CLIENT_ID;
+//    
+//    @Value("${kakao.client.secret}")
+//    private String KAKAO_CLIENT_SECRET;
+//    
+//    @Value("${kakao.redirect.url}")
+//    private String KAKAO_REDIRECT_URL;
+//    
+//    private final static String KAKAO_AUTH_URI = "https//kauth.kakao.com";
+//    private final static String KAKAO_API_URI = "https//kapi.kakao.com";
+//    
+//    public String getKakaoLogin() {
+//    	return KAKAO_AUTH_URI + "/oauth/authorize"
+//    			+ "?client_id=" + KAKAO_CLIENT_ID
+//    			+ "&redirect_url" + KAKAO_REDIRECT_URL
+//    			+ "&response_type=code";
+//    }
+    
+    
 }

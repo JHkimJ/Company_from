@@ -85,7 +85,6 @@ li {
 .mainWrapper {
 	width: 100%;
 	margin-top: 30px;
-	border: 2px solid red;
 }
 
 .keywordBar {
@@ -110,7 +109,7 @@ li {
 	height: 45px;
 	border: none;
 	outline: none;
-
+	font-size: 20px;
 }
 
 .keywordTitle {
@@ -172,9 +171,38 @@ li {
 	margin-bottom: 15px;
 }
 
+#bookmark-list {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#bookmark-list li {
+	border-radius: 5px;
+	flex-basis: calc(25% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #79a6cf;
+	color: #fff;
+}
+
 .markIcon i {
 	width: 30px;
 	height: 30px;
+}
+
+.bookmark-icon {
+    cursor: pointer;
+}
+
+.bookmark-icon.selected {
+	color: blue; 
+	width: 20px;
 }
 
 .topicBox {
@@ -198,11 +226,10 @@ li {
 }
 
 #all:checked~.tab label:nth-child(1),
-#politics:checked~.tab label:nth-child(2),
-#economy:checked~.tab label:nth-child(3),
-#society:checked~.tab label:nth-child(4),
-#culture:checked~.tab label:nth-child(5),
-#world:checked~.tab label:nth-child(6) {
+#economy:checked~.tab label:nth-child(2),
+#society:checked~.tab label:nth-child(3),
+#world:checked~.tab label:nth-child(4),
+#IT:checked~.tab label:nth-child(5) {
 	border: none;
 	background-color: black;
 	color: #fff;
@@ -213,11 +240,10 @@ li {
 }
 
 #all:checked~.topicContent div:nth-child(1),
-#politics:checked~.topicContent div:nth-child(2),
-#economy:checked~.topicContent div:nth-child(3),
-#society:checked~.topicContent div:nth-child(4),
-#culture:checked~.topicContent div:nth-child(5),
-#world:checked~.topicContent div:nth-child(6) {
+#economy:checked~.topicContent div:nth-child(2),
+#society:checked~.topicContent div:nth-child(3),
+#world:checked~.topicContent div:nth-child(4),
+#IT:checked~.topicContent div:nth-child(5) {
 	display: block;
 }
 
